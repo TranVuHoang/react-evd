@@ -29,8 +29,12 @@ const YoutubeItem = ({ title, author, image, image2 }) => {
       <div className="youtube-footer">
         <img src={image2} alt="" className="youtube-avt" />
         <div className="youtube-info">
-          <h3 className="youtube-title">{title}</h3>
-          <h4 className="youtube-author">{author}</h4>
+          <h3 className="youtube-title">
+            {title || "This is a default title"}
+          </h3>
+          <h4 className="youtube-author">
+            {author || "This is a default author"}
+          </h4>
         </div>
       </div>
     </div>
@@ -49,8 +53,8 @@ const App = () => {
   return (
     <>
       <YoutubeItem
-        title="Youtube Title"
-        author="Youtube Author"
+        // title="I'm Frontend Developer"
+        // author="Trần Vũ Hoàng"
         image="https://fastly.picsum.photos/id/248/800/300.jpg?hmac=c1tZlY3eIi14JuXRdZBj6HrK2lz1AvGQvUCsd-gjagw"
         image2="https://fastly.picsum.photos/id/622/800/300.jpg?hmac=pYuCMhtu7RoQPlN0bon0-avH_JqQeB_Ek0wRU-eFPG8"
       />
