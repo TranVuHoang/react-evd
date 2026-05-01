@@ -1,9 +1,12 @@
 import YoutubeData from "../data";
 import YoutubeItem from "./YoutubeItem";
 
-const YoutubeList = () => {
+const YoutubeList = (props) => {
+  console.log(props);
+
   return (
     <div className="youtube-list">
+      <div className="youtube-children">{props.children}</div>
       {YoutubeData.map((item, index) => (
         <YoutubeItem
           key={index}

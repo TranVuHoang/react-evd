@@ -44,3 +44,14 @@
   font-weight: bold;
   color: #999;
 }
+.youtube-children {
+  display: flex;
+  border: 1px solid #a4a4a4;
+  background: #32eaea;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
