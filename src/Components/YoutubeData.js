@@ -5,8 +5,7 @@ const YoutubeData = [
     author: "John Doe",
     image:
       "https://images.unsplash.com/photo-1487139975590-b4f1dce9b035?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zmxvd2VyfGVufDB8fDB8fHww",
-    image2:
-      "https://media.istockphoto.com/id/1915475777/photo/pink-cherry-blossom-in-the-morning.webp?b=1&s=612x612&w=0&k=20&c=nzpo3p-xd2XgsNajdrPd7kyRYs4afvo51Rh8mQmWQxE=",
+    image2: "",
   },
   {
     id: 2,
