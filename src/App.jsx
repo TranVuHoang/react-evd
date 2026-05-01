@@ -1,64 +1,78 @@
 import "./App.css";
+
+// JSX : (Javascript XML): định dạng cho phép viết HTML trong React
+// ES6
+// Babel: giúp compile code hỗ trợ những trình duyệt cũ
+// curly braces: dấu {} ngoặc nhọn
+
 /**
- * # 1. Component parent và child
- * App <=> parent component
- * Feature <=> child component
  *
- * App có thể chứa nhiều Feature, nhưng Feature không thể chứa App
- *
- * #2. Props
- * Props là một đối tượng chứa các thuộc tính được truyền từ component cha xuống component con.
- * Props giúp chúng ta có thể tái sử dụng component một cách linh hoạt và dễ dàng hơn.
- * Props chỉ có thể truyền từ component cha xuống component con, không thể truyền ngược lại.
- * Props có thể là bất kỳ kiểu dữ liệu nào, bao gồm cả function, object, array, v.v.
- * Props giúp chúng ta có thể tạo ra các component động và linh hoạt hơn, vì chúng ta có thể truyền các giá trị khác nhau vào cùng một component để tạo ra các kết quả khác nhau.
- * Props cũng giúp chúng ta có thể tách biệt logic và giao diện của component, vì chúng ta có thể truyền các giá trị từ component cha xuống component con mà không cần phải lo lắng về cách chúng được sử dụng trong component con.
- *
+ * element = <div className="info"> Hello world!</div> <-> JSX(nên dùng)
+ * element = React.createElement('div', {class: 'info'}) <-> React element
  */
 
-/** Component YoutubeItem */
-const YoutubeItem = ({ title, author, image, image2 }) => {
-  const props = { title, author, image };
-  console.log(">>>props", props);
+// Props (truyền vào component YoutubeItem)
+const YoutubeItem = (props) => {
+  console.log(props);
 
   return (
-    <div className="youtube-item">
-      <div className="youtube-image">
-        <img src={image} alt="ảnh-1" />
-      </div>
-      <div className="youtube-footer">
-        <img src={image2} alt="" className="youtube-avt" />
-        <div className="youtube-info">
-          <h3 className="youtube-title">
-            {title || "This is a default title"}
-          </h3>
-          <h4 className="youtube-author">
-            {author || "This is a default author"}
-          </h4>
+    <div className="">
+      <div className="youtube-item">
+        <div className="youtube-image" style={{ height: "250px" }}>
+          <img
+            className="youtube-bg"
+            src={props.image}
+            alt=""
+            // style={{ display: "block", maxWidth: "100%", width: "100%", height:"100%"}}
+          />
+        </div>
+        <div className="youtube-footer">
+          <img
+            src="https://images.unsplash.com/photo-1499117901949-e34ef1b2444a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D"
+            alt="youtube-avt"
+            className="youtube-avt"
+          />
+          <div className="youtube-info">
+            <h3 className="youtube-title">
+              {props.titleh3 || "This is title h3"}
+            </h3>
+            <h4 className="youtube-author">
+              {props.author || "This is example of author name"}
+            </h4>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-/** End YoutubeItem */
-
-/**
- * App <=> parent component
- * Feature <=> child component
- * YoutubeItem <=> child component
- * */
-
-/** parent component */
+//parent component
 const App = () => {
   return (
-    <>
-      <YoutubeItem
-        // title="I'm Frontend Developer"
-        // author="Trần Vũ Hoàng"
-        image="https://fastly.picsum.photos/id/248/800/300.jpg?hmac=c1tZlY3eIi14JuXRdZBj6HrK2lz1AvGQvUCsd-gjagw"
-        image2="https://fastly.picsum.photos/id/622/800/300.jpg?hmac=pYuCMhtu7RoQPlN0bon0-avH_JqQeB_Ek0wRU-eFPG8"
-      />
-    </>
+    <div className="">
+      <h1>Less12</h1>
+      <div className="youtube-list">
+        <YoutubeItem
+          image="https://images.unsplash.com/photo-1487139975590-b4f1dce9b035?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zmxvd2VyfGVufDB8fDB8fHww"
+          // titleh3="PHP master"
+          // author="Phan Van Cuong"
+        ></YoutubeItem>
+        <YoutubeItem
+          image="https://plus.unsplash.com/premium_photo-1683121484963-a491b935780b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D"
+          titleh3="PHP master"
+          author="Phan Van Cuong"
+        ></YoutubeItem>
+        <YoutubeItem
+          image="https://media.istockphoto.com/id/1915475777/photo/pink-cherry-blossom-in-the-morning.webp?b=1&s=612x612&w=0&k=20&c=nzpo3p-xd2XgsNajdrPd7kyRYs4afvo51Rh8mQmWQxE="
+          titleh3="HTML CSS Pro"
+          author="Sơn Đặng F8 pro"
+        ></YoutubeItem>
+        <YoutubeItem
+          image="https://media.istockphoto.com/id/1481416659/photo/close-up-of-working-bee-flying-on-canola-field.webp?b=1&s=612x612&w=0&k=20&c=1xFFFP2CIQhUdp5el4BIXs9rJ_YjjaD7V5qnRNggfbM="
+          titleh3="Laravel"
+          author="Hoangan unicode"
+        ></YoutubeItem>
+      </div>
+    </div>
   );
 };
 
