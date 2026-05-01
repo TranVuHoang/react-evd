@@ -1,8 +1,6 @@
 import "./App.css";
-// JSX là cú pháp mở rộng của js(Javascrip XML)
-// ES6
-
-const App = () => {
+/** Tạo component Feature bằng arrow function */
+const Feature = () => {
   return (
     <div className="feature">
       <img src="" alt="Feature" className="feature-image" />
@@ -14,6 +12,17 @@ const App = () => {
         repellendus, explicabo ipsam in natus suscipit.
       </p>
     </div>
+  );
+};
+/** End Feature */
+
+const App = () => {
+  return (
+    <>
+      <Feature />
+      <Feature />
+      <Feature />
+    </>
   );
 };
 
