@@ -1,17 +1,11 @@
 import "./App.css";
+import YoutubeData from "./components/YoutubeData";
 
-// JSX : (Javascript XML): định dạng cho phép viết HTML trong React
-// ES6
-// Babel: giúp compile code hỗ trợ những trình duyệt cũ
-// curly braces: dấu {} ngoặc nhọn
-
-/**
- *
- * element = <div className="info"> Hello world!</div> <-> JSX(nên dùng)
- * element = React.createElement('div', {class: 'info'}) <-> React element
+/** #2.13 Rendering list
+ * - Khi muốn render một list các phần tử giống nhau, ta có thể sử dụng hàm map để duyệt qua mảng dữ liệu và trả về một component cho mỗi phần tử trong mảng đó.
+ * - Mỗi phần tử trong list cần có một thuộc tính key duy nhất để giúp React xác định và quản lý các phần tử trong quá trình render lại.
+ * - Trong ví dụ dưới đây, chúng ta có một component YoutubeItem đại diện cho một video trên YouTube, và chúng ta sử dụng component này để render một danh sách các video dựa trên dữ liệu được truyền vào qua <props className=""></props>
  */
-
-// Props (truyền vào component YoutubeItem)
 const YoutubeItem = (props) => {
   console.log(props);
 
@@ -47,6 +41,11 @@ const YoutubeItem = (props) => {
 };
 //parent component
 const App = () => {
+  const array = [1, 2, 3, 4, 5];
+  const double = array.map((item) => {
+    return item * 2;
+  });
+
   return (
     <div className="">
       <h1>Less12</h1>
