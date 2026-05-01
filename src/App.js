@@ -1,28 +1,18 @@
 import "./App.css";
-import logo from "./logo.svg";
 // JSX là cú pháp mở rộng của js(Javascrip XML)
 // ES6
 
 const App = () => {
-  const name = "Hoàng JR";
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello {name === "Hoàng JR" ? name : "Guest"}!</h1>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="feature">
+      <img src="" alt="Feature" className="feature-image" />
+      <h3 className="feature-title">Feature Title</h3>
+      <p className="feature-desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        quaerat distinctio illum inventore, doloremque corporis? Voluptatum
+        maxime dignissimos incidunt, eveniet omnis quam, culpa dolorum
+        repellendus, explicabo ipsam in natus suscipit.
+      </p>
     </div>
   );
 };
