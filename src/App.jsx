@@ -1,9 +1,12 @@
 import "./App.css";
-import YoutubeList from "./Components/Youtube/YoutubeList";
+import Toggle from "./Components/state/Toggle";
 
 const App = () => {
-  const children = "Thêm children";
-  return <YoutubeList>{children}</YoutubeList>;
+  return (
+    <>
+      <Toggle />
+    </>
+  );
 };
 
 export default App;
