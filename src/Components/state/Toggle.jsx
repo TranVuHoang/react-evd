@@ -17,10 +17,19 @@ const Toggle = () => {
   // const [a, b] = [1, 2];
   // console.log(a, b);
 
-  const [on, setOn] = useState(false);
-  console.log(on, setOn); // [false, function], giá trị của biến on chính bằng giá trị khởi tạp của useState(false) chính là giá trị false.
+  // initialize value: boolean(true, false), number(1,2,3,...), string("Hoàng IT"), undefine, null, object(usename: "Hoàng Trần", age: 29), array[1,2,3,...]
 
-  return <div className="toggle"></div>;
+  // const [title, setTitle]
+  // const [isActive, setIsActive]
+
+  const [on, setOn] = useState(false);
+  console.log(">>>: ", on); // [false, function], giá trị của biến on chính bằng giá trị khởi tạp của useState(false) chính là giá trị false.
+
+  return (
+    <button className="toggle" onClick={() => setOn(true)}>
+      Toggle {on ? "On" : "Off"}
+    </button>
+  );
 };
 
 export default Toggle;
